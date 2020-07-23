@@ -28,7 +28,7 @@ namespace api_postgresql
 		{
 			services.AddControllers();
 
-			var sqlConnectionString = Configuration["PostgreSqlConnectionString"];
+			var sqlConnectionString = Configuration["ConnectionStrings:PostgreSqlConnectionString"];
 
 			services.AddDbContext<PostgreSqlContext>(options => options.UseNpgsql(sqlConnectionString));
 
